@@ -1,0 +1,11 @@
+@use '~scss-reset/reset';
+@use './styles/fonts.scss';
+@use './styles/variables.scss' as var;
+
+body {
+  width: 100%;
+  min-height: 100dvh;
+  background-color: var.$dark-gray;
+  font-family: outfit;
+  font-weight: 400;
+}

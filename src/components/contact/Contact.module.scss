@@ -1,0 +1,24 @@
+@use '../../styles/mixins.scss' as mix;
+
+.contact {}
+
+.link {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: .5em;
+  color: #ffffff;
+  font-size: 1.5em;
+}
+
+.name {
+  @include mix.textCorrect;
+}
+
+svg {
+  width: 1.5em;
+
+  path {
+    fill: gold;
+  }
+}
