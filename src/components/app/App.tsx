@@ -4,18 +4,19 @@ import { AcardeonWorks } from '../akardeonWorks'
 import { Contact } from '../contact'
 import { ContainerBlock } from '../containers/containerBlock'
 import { ContainerRadius } from '../containers/containerRadius'
+import { ContentContainer } from '../containers/contentContainer'
+import { NavContainer } from '../containers/navContainer'
 import { PageContainer } from '../containers/pageContainer'
 import { Image } from '../elements/image'
 import { MainTitle } from '../elements/mainTitle'
 import { PathWhite } from '../elements/pathWhite'
 import { TitleBlokWhite } from '../elements/titleBlokWhite'
 import { Skil } from '../skil'
-import styles from './App.module.scss'
 
 export const App = () => {
   return (
     <PageContainer>
-      <div className={styles.nav}>
+      <NavContainer>
         <ContainerRadius>
           <Image src={data.photo} />
         </ContainerRadius>
@@ -37,9 +38,9 @@ export const App = () => {
             ))}
           </>
         </ContainerBlock>
-      </div>
+      </NavContainer>
 
-      <div className={styles.info}>
+      <ContentContainer>
         <ContainerBlock>
           <MainTitle title={data.name} />
           <TitleBlokWhite title={data.position} />
@@ -63,8 +64,7 @@ export const App = () => {
         <ContainerBlock>
           <TitleBlokWhite title={'Портфолио'} />
         </ContainerBlock>
-
-      </div>
+      </ContentContainer>
     </PageContainer>
   )
 }

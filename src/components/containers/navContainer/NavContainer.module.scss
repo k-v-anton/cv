@@ -1,0 +1,15 @@
+.container {
+  width: 300px;
+  display: flex;
+  height: fit-content;
+  flex-direction: column;
+  gap: 2em;
+  box-shadow:
+    0 0 2px 2px rgb(63, 63, 63),
+    0 0 3px 3px rgb(82, 82, 82),
+    0 0 4px 4px rgb(82, 82, 82),
+    0 0 5px 5px rgb(82, 82, 82);
+  border-radius: .5em;
+  padding: .5em;
+
+}
