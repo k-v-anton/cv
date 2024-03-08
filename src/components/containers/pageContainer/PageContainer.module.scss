@@ -12,5 +12,5 @@ $INDENT: 1em;
   padding: $INDENT;
   display: flex;
   justify-content: space-between;
-  gap: $INDENT;
+  gap: $INDENT * 2;
 }

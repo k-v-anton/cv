@@ -1,4 +1,3 @@
-
 export type ContaktIconPropsType = {
   size?: number
   color?: string
@@ -23,41 +22,46 @@ export type SkillsType = {
   hardSkils: SkilType[]
 }
 
-type ITWorkType = {
-  id: number
-  companyName: string
-  jobTitle: string
-  startWork: string
-  endWork: string
-  jobResponsibilities: string[]
-  stack: string[]
-}
+// type ITWorkType = {
+//   id: number
+//   companyName: string
+//   jobTitle: string
+//   startWork: string
+//   endWork: string
+//   jobResponsibilities: string[]
+//   stack: string[]
+// }
 
-type WorksType = {
-  it: ITWorkType[]
-  notIt: []
-}
+// type WorksType = {
+//   it: ITWorkType[]
+//   notIt: []
+// }
 
 export type DataType = {
-  photo: any
-  firstName: string
-  middleName: string
-  lastName: string
+  photo: string
+  name: string
   position: string
   contakts: ContactType[]
   skills: SkillsType
-  aboutMe: string
-  works: WorksType
 }
-
-
 
 export type EducationType = {
-  id: number;
-  institut: string;
-  speciality: string;
-  diplomImage: string;
-  startDate: string;
-  endDate: string;
+  id: number
+  institut: string
+  speciality: string
+  diplomImage: string
+  startDate: string
+  endDate: string
+  href?: string
 }
 export type EducationsType = EducationType[]
+
+export type WorkType = {
+  id: number
+  placeOfWork: string
+  jobTitle: string
+  startDate: string
+  endDate: string
+  jobResponsebilities: string[]
+  stack: string[]
+}

@@ -17,6 +17,7 @@ export const Item = React.memo((props: ItemAcardeonPropsType) => {
     institut,
     speciality,
     startDate,
+    href
   } = props
 
   const bodyRef = useRef<HTMLDivElement | null>(null)
@@ -26,7 +27,7 @@ export const Item = React.memo((props: ItemAcardeonPropsType) => {
     bodyRef && bodyRef.current && id === active
       ? setHeightItem(bodyRef.current.offsetHeight)
       : setHeightItem(0)
-  }, [bodyRef, active, id])
+  })
 
   return (
     <div className={styles.container}>
@@ -39,12 +40,19 @@ export const Item = React.memo((props: ItemAcardeonPropsType) => {
           height: `${heihtItem}px`,
         }}
       >
-        <div ref={bodyRef} className={styles.info}>
-          <p>
-            {startDate} - {endDate}
-          </p>
-          <p>{institut}</p>
-          {diplomImage && <img src={diplomImage} alt='' />}
+        <div ref={bodyRef} className={styles.wrapperContent}>
+          <div className={styles.content}>
+            <div className={styles.info}>
+              <h3 className={styles.title}>{institut}</h3>
+              <p className={styles.item}>
+                {startDate} - {endDate}
+              </p>
+            </div>
+
+            <div className={styles.image}>
+              {diplomImage && <a href={href} target='blanck'><img src={diplomImage} alt='' /></a>}
+            </div>
+          </div>
         </div>
       </div>
     </div>

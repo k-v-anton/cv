@@ -1,4 +1,5 @@
 import { ContactType } from '../../data/data.types'
+import { PathWhite } from '../elements/pathWhite'
 import styles from './Contact.module.scss'
 
 export const Contact = (props: ContactType) => {
@@ -7,9 +8,9 @@ export const Contact = (props: ContactType) => {
     <a className={styles.contact} href={href} target='blanck'>
       <div className={styles.contactNamewrapper}>
         <Icon />
-        <p className={styles.contactTitle}>{name}</p>
+        <PathWhite text={name}/>
       </div>
-      <p className={styles.contactValue}>{value}</p>
+      <PathWhite text={value}/>
     </a>
   )
 }

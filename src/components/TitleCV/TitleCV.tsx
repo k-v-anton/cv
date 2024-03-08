@@ -1,17 +1,18 @@
-import { data } from '../../data/data'
-import styles from './TitleCV.module.scss'
+import { ContainerBlock } from '../containers/containerBlock'
+import { MainTitle } from '../elements/mainTitle'
+import { TitleBlokWhite } from '../elements/titleBlokWhite'
 
-export const TitleCV = () => {
-  const { firstName, lastName, middleName, position } = data
-
+export const TitleCV = ({
+  name,
+  position,
+}: {
+  name: string
+  position: string
+}) => {
   return (
-    <div className={styles.container}>
-      <div className={styles.fullName}>
-        <span className={styles.name}>{firstName}</span>
-        <span className={styles.name}>{middleName}</span>
-        <span className={styles.name}>{lastName}</span>
-      </div>
-      <div className={styles.position}>{position}</div>
-    </div>
+    <ContainerBlock>
+      <MainTitle title={name} />
+      <TitleBlokWhite title={position} />
+    </ContainerBlock>
   )
 }

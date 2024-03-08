@@ -8,4 +8,19 @@ body {
   background-color: var.$dark-gray;
   font-family: outfit;
   font-weight: 400;
+  color: #EFEFEF;
+  font-size: 1em;
+  font-weight: 600;
+  user-select: none;
+}
+
+h1,
+h2 {
+  color: #CACACA;
+  font-weight: 900;
+}
+
+h3, h4 {
+  color: #111111;
+  font-weight: 700;
 }
