@@ -1,10 +1,4 @@
-type EducationType = {
-  id: number
-  companyName: string
-  speciality: string
-  startEducation: string
-  endEducation: string
-}
+
 export type ContaktIconPropsType = {
   size?: number
   color?: string
@@ -18,9 +12,15 @@ export type ContactType = {
   href: string
 }
 
-type SkillsType = {
-  softSkills: string[]
-  hardSkils: string[]
+export type SkilType = {
+  id: number
+  title: string
+  progress: number
+}
+
+export type SkillsType = {
+  softSkills: SkilType[]
+  hardSkils: SkilType[]
 }
 
 type ITWorkType = {
@@ -46,7 +46,18 @@ export type DataType = {
   position: string
   contakts: ContactType[]
   skills: SkillsType
-  education: EducationType[]
   aboutMe: string
   works: WorksType
 }
+
+
+
+export type EducationType = {
+  id: number;
+  institut: string;
+  speciality: string;
+  diplomImage: string;
+  startDate: string;
+  endDate: string;
+}
+export type EducationsType = EducationType[]

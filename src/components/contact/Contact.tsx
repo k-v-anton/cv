@@ -2,14 +2,14 @@ import { ContactType } from '../../data/data.types'
 import styles from './Contact.module.scss'
 
 export const Contact = (props: ContactType) => {
-
-  const { icon: Icon, name, href } = props
+  const { icon: Icon, name, href, value } = props
   return (
-    <li className={styles.conta}>
-      <a className={styles.link} href={href} target='blanck' >
-        <Icon/>
-        <p className={styles.name}>{name}</p>
-      </a>
-    </li>
+    <a className={styles.contact} href={href} target='blanck'>
+      <div className={styles.contactNamewrapper}>
+        <Icon />
+        <p className={styles.contactTitle}>{name}</p>
+      </div>
+      <p className={styles.contactValue}>{value}</p>
+    </a>
   )
 }

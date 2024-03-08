@@ -2,7 +2,7 @@ import { ContaktIconPropsType } from '../data/data.types'
 
 export const PhoneIcon = () => {
   return (
-    <svg version='1.1' x='0px' y='0px' viewBox='0 0 256 256' enable-background='new 0 0 256 256' >
+    <svg version='1.1' x='0px' y='0px' viewBox='0 0 256 256' enableBackground='new 0 0 256 256' >
       <metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata>
       <g>
         <path

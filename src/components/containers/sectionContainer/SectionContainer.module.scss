@@ -1,14 +1,5 @@
-@use '../../../styles/variables.scss' as var;
-
-$WIDTH_SECTION_MAX: var.$size-90;
-$MAIN_SIZE_ELEMENT: var.$size-main;
-$MARGIN_SECTION_CENTER: var.$margin-primary;
-$PADDING_SECTION: var.$size-3 var.$size-1;
-
-.section {
-  border: 1px solid red;
-  width: $MAIN_SIZE_ELEMENT;
-  max-width: $WIDTH_SECTION_MAX;
-  margin: $MARGIN_SECTION_CENTER;
-  padding: $PADDING_SECTION;
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

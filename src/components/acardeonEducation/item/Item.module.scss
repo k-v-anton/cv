@@ -1,0 +1,26 @@
+.container {
+  overflow: hidden;
+  max-height: auto;
+}
+
+.btn {
+  width: 100%;
+  background-color: gold;
+  text-align-last: left;
+}
+
+.colaps {
+  transition: height .5s ease;
+}
+
+.info {
+  width: 100%;
+  padding: 1em;
+  background-color: #fff;
+
+
+}
+
+.open {
+  height: auto;
+}

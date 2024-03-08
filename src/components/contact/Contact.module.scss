@@ -1,24 +1,33 @@
 @use '../../styles/mixins.scss' as mix;
 
-.contact {}
 
-.link {
+.contact {
   text-decoration: none;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: .5em;
-  color: #ffffff;
-  font-size: 1.5em;
-}
-
-.name {
-  @include mix.textCorrect;
 }
 
 svg {
-  width: 1.5em;
+  width: 1em;
 
   path {
-    fill: gold;
+    fill: white;
   }
+}
+
+.contactNamewrapper {
+  display: flex;
+  gap: 0.5em;
+}
+
+.contactTitle {
+  color: #ffffff;
+  font-size: 1em;
+  @include mix.textCorrect;
+}
+
+.contactValue {
+  color: #ffffff;
 }
