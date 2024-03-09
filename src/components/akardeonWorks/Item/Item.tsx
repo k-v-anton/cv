@@ -1,5 +1,11 @@
 import { useEffect, useRef, useState } from 'react'
 import { WorkType } from '../../../data/data.types'
+import { ButtonAcardeon } from '../../ButtonAcardeon'
+import { ContainerDinamicHeight } from '../../containers/ContainerDinamicHeight'
+import { SectionContainer } from '../../containers/sectionContainer/SectionContainer'
+import { PathBlack } from '../../elements/PathBlack'
+import { TitleListBlack } from '../../elements/TitleListBlack'
+import { UnorderedList } from '../../elements/UnorderedList'
 import styles from './Item.module.scss'
 
 type ItemAcardeonPropsType = WorkType & {
@@ -25,22 +31,13 @@ export const Item = (props: ItemAcardeonPropsType) => {
 
   useEffect(() => {
     bodyRef && bodyRef.current && id === active
-      ? setHeightItem(bodyRef.current.offsetHeight)
+      ? setHeightItem(bodyRef.current.scrollHeight)
       : setHeightItem(0)
-
-    console.log(
-      bodyRef &&
-        bodyRef.current &&
-        id === active &&
-        bodyRef.current.offsetHeight
-    )
   })
 
   return (
-    <div className={styles.container}>
-      <button className={styles.btn} onClick={() => handler(id)}>
-        {placeOfWork}
-      </button>
+    <ContainerDinamicHeight>
+      <ButtonAcardeon value={placeOfWork} onClick={() => handler(id)} />
       <div
         className={styles.colaps}
         style={{
@@ -49,27 +46,22 @@ export const Item = (props: ItemAcardeonPropsType) => {
       >
         <div ref={bodyRef} className={styles.wrapperContent}>
           <div className={styles.content}>
-            <h3 className={styles.title}>{jobTitle}</h3>
+            <SectionContainer>
+              <div>
+                <TitleListBlack title={jobTitle} />
+                <PathBlack text={`(${startDate} - ${endDate})`} />
+              </div>
 
-            <p className={styles.item}>
-              {startDate} - {endDate}
-            </p>
-            <h3 className={styles.title}>Должносные обязанности:</h3>
-            <ul>
-              {jobResponsebilities.map((item) => (
-                <li className={`${styles.item} ${styles.listDot}`}>{item}</li>
-              ))}
-            </ul>
-
-            <h3 className={styles.title}>Стэк:</h3>
-            <ul>
-              {stack.map((item) => (
-                <li className={`${styles.item} ${styles.listDot}`}>{item}</li>
-              ))}
-            </ul>
+              <UnorderedList
+                list={jobResponsebilities}
+                title={'Должносные обязанности:'}
+              />
+              
+              <UnorderedList list={stack} title={'Стэк:'} />
+            </SectionContainer>
           </div>
         </div>
       </div>
-    </div>
+    </ContainerDinamicHeight>
   )
 }

@@ -7,7 +7,11 @@ import { linkedInIcon } from '../icons/linkedInIcon'
 import stepikPython from '../images/education/stepickPython.webp'
 import tmsFrontend from '../images/education/tmsFrontend.webp'
 import photo from '../images/photo.webp'
-import { DataType, EducationType, WorkType } from './data.types'
+import { DataType, EducationType, PortfolioItemType, WorkType } from './data.types'
+
+import wheel from '../images/portfolio/01wheel.png'
+import lol from '../images/portfolio/lol.png'
+import stalker from '../images/portfolio/stalker.png'
 
 export const data: DataType = {
   photo: photo,
@@ -176,3 +180,23 @@ export const works: WorkType[] = [
 
 export const aboutMe =
   'Frontend разработкик с 2-х летним опытом разработки(комерческая разработка 1 год). Умею разбираться в чужом коде, постоянно учусь новым технологиям и применяю их в работе.'
+
+
+
+export const portfolio: PortfolioItemType[] = [
+  {
+    id: 1,
+    image: lol,
+    href: 'https://league-of-leagends.vercel.app/'
+  },
+  {
+    id: 2,
+    image: wheel,
+    href: 'https://tyre-seven.vercel.app/'
+  },
+  {
+    id: 3,
+    image: stalker,
+    href: 'https://stalker-sand.vercel.app/'
+  },
+]

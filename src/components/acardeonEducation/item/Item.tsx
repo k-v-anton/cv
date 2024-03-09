@@ -1,5 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { EducationType } from '../../../data/data.types'
+import { ButtonAcardeon } from '../../ButtonAcardeon'
+import { ContainerDinamicHeight } from '../../containers/ContainerDinamicHeight'
+import { PathBlack } from '../../elements/PathBlack'
+import { TitleListBlack } from '../../elements/TitleListBlack'
 import styles from './Item.module.scss'
 
 type ItemAcardeonPropsType = EducationType & {
@@ -17,7 +21,7 @@ export const Item = React.memo((props: ItemAcardeonPropsType) => {
     institut,
     speciality,
     startDate,
-    href
+    href,
   } = props
 
   const bodyRef = useRef<HTMLDivElement | null>(null)
@@ -30,10 +34,8 @@ export const Item = React.memo((props: ItemAcardeonPropsType) => {
   })
 
   return (
-    <div className={styles.container}>
-      <button className={styles.btn} onClick={() => handler(id)}>
-        {speciality}
-      </button>
+    <ContainerDinamicHeight>
+      <ButtonAcardeon onClick={() => handler(id)} value={speciality} />
       <div
         className={styles.colaps}
         style={{
@@ -42,19 +44,21 @@ export const Item = React.memo((props: ItemAcardeonPropsType) => {
       >
         <div ref={bodyRef} className={styles.wrapperContent}>
           <div className={styles.content}>
-            <div className={styles.info}>
-              <h3 className={styles.title}>{institut}</h3>
-              <p className={styles.item}>
-                {startDate} - {endDate}
-              </p>
+            <div>
+              <TitleListBlack title={institut} />
+              <PathBlack text={`(${startDate} - ${endDate})`} />
             </div>
 
             <div className={styles.image}>
-              {diplomImage && <a href={href} target='blanck'><img src={diplomImage} alt='' /></a>}
+              {diplomImage && (
+                <a href={href} target='blanck'>
+                  <img src={diplomImage} alt='' />
+                </a>
+              )}
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </ContainerDinamicHeight>
   )
 })

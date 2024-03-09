@@ -65,3 +65,10 @@ export type WorkType = {
   jobResponsebilities: string[]
   stack: string[]
 }
+
+
+export type PortfolioItemType = {
+  id: number
+  image: string
+  href: string
+}

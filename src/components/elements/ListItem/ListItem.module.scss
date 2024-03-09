@@ -1,0 +1,19 @@
+.listItem {
+  font-size: 1em;
+  margin-left: 2em;
+}
+
+.dot {
+  position: relative;
+  &::after {
+    content: '';
+    width: 0.3em;
+    height: 0.3em;
+    background-color: #0075FF;
+    position: absolute;
+    border-radius: 50%;
+    left: -1em;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+}

@@ -26,7 +26,13 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+
+    "component": "generate-react component",
+    "page": "generate-react component --type=page",
+    "element": "generate-react component --type=element",
+    "hook": "generate-react component --type=hook",
+    "container": "generate-react component --type=container"
   },
   "eslintConfig": {
     "extends": [
@@ -47,6 +53,9 @@
     ]
   },
   "devDependencies": {
+    "@types/react-transition-group": "^4.4.10",
+    "generate-react-cli": "^8.4.1",
+    "react-transition-group": "^4.4.5",
     "sass": "^1.71.0"
   }
 }
