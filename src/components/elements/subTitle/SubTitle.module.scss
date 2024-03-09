@@ -4,4 +4,9 @@
   color: #EFEFEF;
   text-align: left;
   letter-spacing: 0.05em;
+
+  @media (max-width: 768px) {
+    text-align: center;
+    margin-bottom: 1em;
+  }
 }

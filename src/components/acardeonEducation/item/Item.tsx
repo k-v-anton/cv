@@ -31,7 +31,7 @@ export const Item = React.memo((props: ItemAcardeonPropsType) => {
     bodyRef && bodyRef.current && id === active
       ? setHeightItem(bodyRef.current.offsetHeight)
       : setHeightItem(0)
-  })
+  }, [active, id, bodyRef])
 
   return (
     <ContainerDinamicHeight>

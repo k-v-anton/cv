@@ -31,9 +31,9 @@ export const Item = (props: ItemAcardeonPropsType) => {
 
   useEffect(() => {
     bodyRef && bodyRef.current && id === active
-      ? setHeightItem(bodyRef.current.scrollHeight)
+      ? setHeightItem(bodyRef.current.offsetHeight)
       : setHeightItem(0)
-  })
+  }, [active, id, bodyRef])
 
   return (
     <ContainerDinamicHeight>
