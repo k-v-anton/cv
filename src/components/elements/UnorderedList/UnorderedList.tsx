@@ -13,7 +13,7 @@ export const UnorderedList = (props: UnorderedListPropsType) => {
     <ul className={styles.unorderedList}>
       {title && <TitleListBlack title={title} />}
       {list.map((elem) => (
-        <ListItem text={elem} />
+        <ListItem key={elem} text={elem} />
       ))}
     </ul>
   )
