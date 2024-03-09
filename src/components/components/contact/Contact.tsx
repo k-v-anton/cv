@@ -1,5 +1,4 @@
 import { ContactType } from '../../../data/data.types'
-import { GitHubIcon } from '../../../icons/GitHubIcon'
 import { ContainerElementWithImage } from '../../containers/ContainerElementWithImage'
 import { Link } from '../../elements/Link'
 import { PathWhite } from '../../elements/pathWhite'
