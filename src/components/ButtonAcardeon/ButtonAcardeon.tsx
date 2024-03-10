@@ -4,7 +4,6 @@ import styles from './ButtonAcardeon.module.scss'
 type ButtonAcardeonPropsType = {
   value: string
   onClick?: ()=>any
-  
 }
 
 export const ButtonAcardeon = (props: ButtonAcardeonPropsType) => {

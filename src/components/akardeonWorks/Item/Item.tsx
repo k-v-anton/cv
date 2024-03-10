@@ -56,7 +56,7 @@ export const Item = (props: ItemAcardeonPropsType) => {
                 list={jobResponsebilities}
                 title={'Должносные обязанности:'}
               />
-              
+
               <UnorderedList list={stack} title={'Стэк:'} />
             </SectionContainer>
           </div>

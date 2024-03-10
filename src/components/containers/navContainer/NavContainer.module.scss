@@ -1,15 +1,20 @@
+@use '../../../styles/variables.scss' as var;
+
+$WIDTH_MAX: 20rem;
+$INDENT: var.$indentPrimary;
+$RADIUS: var.$radiusPrimary;
+
 .container {
-  width: 300px;
+  width: $WIDTH_MAX;
   display: flex;
-  height: fit-content;
   flex-direction: column;
-  gap: 2em;
+  height: fit-content;
+  gap: $INDENT * 2;
   box-shadow:
     0 0 2px 2px rgb(63, 63, 63),
     0 0 3px 3px rgb(82, 82, 82),
     0 0 4px 4px rgb(82, 82, 82),
     0 0 5px 5px rgb(82, 82, 82);
-  border-radius: .5em;
-  padding: .5em;
-
+  border-radius: $RADIUS;
+  padding: $INDENT;
 }

@@ -1,8 +1,10 @@
+@use '../../../styles/variables.scss' as var;
+@use '../../../styles/mixins.scss' as mix;
+
+$INDENT: var.$indentSecondary;
+
 .link {
   text-decoration: none;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: .5em;
-  color: #111111;
+  gap: $INDENT;
+  @include mix.flexBetween;
 }

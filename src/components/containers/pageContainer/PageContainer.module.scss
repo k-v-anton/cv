@@ -1,18 +1,17 @@
 @use '../../../styles/variables.scss' as var;
 
-$WIDTH_SECTION_MAX: var.$size-90;
-$MAIN_SIZE_ELEMENT: var.$size-main;
-$MARGIN_SECTION_CENTER: var.$margin-primary;
-$INDENT: 1em;
+$WIDTH_SECTION_MAX: 90rem;
+$MARGIN_SECTION_CENTER: 0 auto;
+$INDENT: var.$indentPrimary;
 
 .section {
-  width: $MAIN_SIZE_ELEMENT;
-  max-width: $WIDTH_SECTION_MAX;
-  margin: $MARGIN_SECTION_CENTER;
-  padding: $INDENT;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   gap: $INDENT * 2;
+  max-width: $WIDTH_SECTION_MAX;
+  margin: $MARGIN_SECTION_CENTER;
+  padding: $INDENT;
 }
 
 

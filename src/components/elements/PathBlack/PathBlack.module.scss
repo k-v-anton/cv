@@ -1,5 +1,8 @@
-.pathBlack {
-  font-size: 0.9em;
-  font-weight: 400;
-  color: #111111;
+@use '../../../styles/variables.scss' as var;
+@use '../../../styles/mixins.scss' as mix;
+
+$COLOR: var.$black;
+
+.path {
+  @include mix.path($COLOR)
 }

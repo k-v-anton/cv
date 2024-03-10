@@ -1,4 +1,8 @@
+@use '../../../styles/variables.scss' as var;
+
+$INDENT: var.$indentSecondary;
+
 .containerElementWithImage {
   display: flex;
-  gap: 0.5em;
+  gap: $INDENT;
 }

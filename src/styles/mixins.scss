@@ -5,3 +5,38 @@
     text-transform: uppercase;
   }
 }
+@mixin titleBlock {
+  font-size: 1em;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+}
+
+@mixin nameItem($color) {
+  font-size: 0.9em;
+  color: $color;
+}
+
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flexBetween {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin titleH1 {
+  font-size: 2rem;
+  font-weight: 900;
+  color: white
+}
+
+@mixin path($color) {
+  font-size: 0.9em;
+  font-weight: 400;
+  color: $color
+}
+

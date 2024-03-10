@@ -1,5 +1,9 @@
+@use '../../../styles/variables.scss' as var;
+
+$INDENT: var.$indentPrimary;
+
 .container {
   display: flex;
   flex-direction: column;
-  gap: 1em;
+  gap: $INDENT;
 }

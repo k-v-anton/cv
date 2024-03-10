@@ -1,14 +1,29 @@
+@use '../../styles/variables.scss' as var;
+@use '../../styles/mixins.scss' as mix;
+
+$BUTTON_BORDER_PRIMARY: .2rem solid var.$blue;
+$BUTTON_BORDER_SECONDARY: .2rem solid var.$blueIce;
+$BUTTON_BACKGROUND: var.$silver;
+$BUTTON_RADIUS: 1rem;
+$BUTTON_INDENT: .5rem 1rem;
+$BUTTON_BOX_SHADOW: inset 0 0 .2em .05em var.$blue;
+$BUTTON_COLOR_HOVER: var.$blueIce;
+$BUTTON_TRANSITION: border var.$tarnsitionTime var.$transitionFunction,
+  box-shadow var.$tarnsitionTime var.$transitionFunction;
+
 .buttonAcardeon {
   width: 100%;
-  text-align-last: left;
-  padding: .5em;
-  border: .2em solid #0075FF;
-  border-radius: 1em;
-  background-color: #cacaca;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1em;
-  font-weight: 900;
-  letter-spacing: 0.05em;
+  position: relative;
+  padding: $BUTTON_INDENT;
+  border: $BUTTON_BORDER_PRIMARY;
+  border-radius: $BUTTON_RADIUS;
+  background-color: $BUTTON_BACKGROUND;
+  transition: $BUTTON_TRANSITION;
+  @include mix.flexCenter;
+  @include mix.titleBlock;
+
+  &:hover {
+    border: $BUTTON_BORDER_SECONDARY;
+    box-shadow: $BUTTON_BOX_SHADOW;
+  }
 }

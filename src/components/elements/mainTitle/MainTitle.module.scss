@@ -1,9 +1,11 @@
-.title {
-  font-size: 2em;
-  font-weight: 900;
-  color: #EFEFEF;
+@use '../../../styles/variables.scss' as var;
+@use '../../../styles/mixins.scss' as mix;
 
-   @media (max-width: 768px) {
+
+.title {
+  @include mix.titleH1;
+
+   @media (max-width: var.$mobileSize) {
     text-align: center;
   }
 }
