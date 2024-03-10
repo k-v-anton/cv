@@ -5,7 +5,7 @@ $blueIce: #1863b8;
 $white: #EFEFEF;
 $dark-gray: #333636;
 
-$transitionFunction: ease;
+$transitionFunction: cubic-bezier(.47,-0.06,.5,1.07);
 $tarnsitionTime: .3s;
 
 
@@ -15,6 +15,17 @@ $indentSecondary: .5em;
 $radiusPrimary: 1em;
 
 $mobileSize : 768px;
+
+$fontBlack: 900;
+$fontNormal: 400;
+$fontBold: 700;
+
+$fontSizeTitlePage: 2rem;
+$fontSizeTitleSubPage: 1.5rem;
+$fontSizeSection: 1.2rem;
+$fontSizeTitle: 1.2rem;
+$fontSizeText: .9rem;
+
 
 
 

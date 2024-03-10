@@ -4,5 +4,5 @@
 $COLOR: var.$white;
 
 .path {
-  @include mix.path($COLOR)
+  @include mix.text($COLOR)
 }

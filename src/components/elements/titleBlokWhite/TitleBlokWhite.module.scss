@@ -1,8 +1,10 @@
+@use '../../../styles/variables.scss' as var;
+@use '../../../styles/mixins.scss' as mix;
+
+$COLOR: var.$white;
+$INDENT: var.$indentPrimary;
+
 .title {
-  font-weight: 700;
-  font-size: 1.5em;
-  color: #EFEFEF;
-  text-align: center;
-  text-transform: uppercase;
-  margin-bottom: .5em;
+  padding-bottom: $INDENT ;
+  @include mix.titleSection($COLOR)
 }

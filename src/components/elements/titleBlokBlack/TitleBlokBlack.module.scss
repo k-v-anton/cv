@@ -1,5 +1,8 @@
+@use '../../../styles/variables.scss' as var;
+@use '../../../styles/mixins.scss' as mix;
+
+$COLOR: var.$black;
+
 .title {
-  font-weight: 700;
-  font-size: 1em;
-  color: #111;
+  @include mix.titleBlock($COLOR);
 }

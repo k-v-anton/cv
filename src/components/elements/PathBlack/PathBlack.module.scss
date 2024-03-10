@@ -3,6 +3,6 @@
 
 $COLOR: var.$black;
 
-.path {
-  @include mix.path($COLOR)
+.pathBlack {
+  @include mix.text($COLOR)
 }

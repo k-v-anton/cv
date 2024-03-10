@@ -1,0 +1,14 @@
+@use '../../../../styles/variables.scss' as var;
+
+$COLOR_HOVER: var.$blue;
+$TIME: var.$tarnsitionTime;
+$FUNCTION: var.$transitionFunction;
+
+.item {
+  transition: box-shadow $TIME $FUNCTION, scale $TIME $FUNCTION;
+
+  &:hover {
+    box-shadow: 0 0 .5em .1em $COLOR_HOVER;
+    scale: 1.1;
+  }
+}

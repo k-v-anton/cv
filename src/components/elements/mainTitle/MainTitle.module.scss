@@ -1,9 +1,10 @@
 @use '../../../styles/variables.scss' as var;
 @use '../../../styles/mixins.scss' as mix;
 
+$COLOR: var.$white;
 
 .title {
-  @include mix.titleH1;
+  @include mix.titlePage($COLOR);
 
    @media (max-width: var.$mobileSize) {
     text-align: center;

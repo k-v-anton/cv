@@ -10,6 +10,7 @@ $BUTTON_BOX_SHADOW: inset 0 0 .2em .05em var.$blue;
 $BUTTON_COLOR_HOVER: var.$blueIce;
 $BUTTON_TRANSITION: border var.$tarnsitionTime var.$transitionFunction,
   box-shadow var.$tarnsitionTime var.$transitionFunction;
+  $COLOR: var.$black;
 
 .buttonAcardeon {
   width: 100%;
@@ -20,7 +21,7 @@ $BUTTON_TRANSITION: border var.$tarnsitionTime var.$transitionFunction,
   background-color: $BUTTON_BACKGROUND;
   transition: $BUTTON_TRANSITION;
   @include mix.flexCenter;
-  @include mix.titleBlock;
+  @include mix.textButton( $COLOR);
 
   &:hover {
     border: $BUTTON_BORDER_SECONDARY;

@@ -5,16 +5,8 @@
     text-transform: uppercase;
   }
 }
-@mixin titleBlock {
-  font-size: 1em;
-  font-weight: 900;
-  letter-spacing: 0.05em;
-}
 
-@mixin nameItem($color) {
-  font-size: 0.9em;
-  color: $color;
-}
+// ============POSITION==========
 
 @mixin flexCenter {
   display: flex;
@@ -28,15 +20,44 @@
   justify-content: space-between;
 }
 
-@mixin titleH1 {
+
+
+// ============FONTS==========
+@mixin titlePage($color) {
   font-size: 2rem;
   font-weight: 900;
-  color: white
-}
-
-@mixin path($color) {
-  font-size: 0.9em;
-  font-weight: 400;
   color: $color
 }
 
+@mixin subTitlePage($color) {
+  font-size: 1.5em;
+  font-weight: 700;
+  color: $color;
+  letter-spacing: 0.05em;
+}
+
+@mixin titleBlock($color) {
+  font-weight: 700;
+  font-size: 1.2em;
+  color: $color;
+}
+
+@mixin titleSection($color) {
+  font-weight: 700;
+  font-size: 1em;
+  color: $color;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+@mixin textButton($color) {
+  font-size: 1em;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  color: $color;
+}
+
+@mixin text($color) {
+  font-size: 0.9em;
+  color: $color;
+}
